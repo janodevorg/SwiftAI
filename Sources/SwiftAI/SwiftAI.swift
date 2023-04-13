@@ -5,7 +5,11 @@ import OpenAIClient
 struct SwiftAI: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
         abstract: "OpenAI client.",
-        subcommands: [Completion.self, StreamCompletion.self]
+        subcommands: [
+            Completion.self,
+            SetCredentials.self,
+            StreamCompletion.self
+        ]
     )
 
     mutating func run() async throws {
@@ -13,9 +17,11 @@ struct SwiftAI: AsyncParsableCommand {
           print("'swift-ai' isn't supported on this platform.")
           return
         }
-        guard !apiKey.isEmpty && !orgId.isEmpty else {
+        
+        guard let credentials = try Credentials.get(), !credentials.isEmpty else {
             throw MissingCredentials()
         }
+
         print("Try --help")
     }
 }
