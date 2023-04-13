@@ -1,16 +1,6 @@
 import ArgumentParser
 import Foundation
 
-private struct InternalError: Error, CustomStringConvertible {
-    private let message: String
-    init(message: String) {
-        self.message = message
-    }
-    var description: String {
-        message
-    }
-}
-
 /// Set Credentials.
 struct SetCredentials: AsyncParsableCommand {
     static let configuration = CommandConfiguration(abstract:
