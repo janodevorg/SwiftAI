@@ -1,4 +1,4 @@
-[![Swift](https://github.com/janodevorg/SwiftAI/actions/workflows/swift.yml/badge.svg)](https://github.com/janodevorg/SwiftAI/actions/workflows/swift.yml) [![MIT license](http://img.shields.io/badge/license-MIT-lightgrey.svg)](http://opensource.org/licenses/MIT)
+[![Swift](https://github.com/janodevorg/SwiftAI/actions/workflows/release.yml/badge.svg)](https://github.com/janodevorg/SwiftAI/actions/workflows/swift.yml) [![MIT license](http://img.shields.io/badge/license-MIT-lightgrey.svg)](http://opensource.org/licenses/MIT)
 
 # SwiftAI
 
