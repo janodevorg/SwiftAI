@@ -12,9 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build executable for release
-        run: swift build -c release --arch arm64 --product SwiftAI
+        run: swift build -c release --arch arm64 --product swiftai
       - name: Compress archive
-        run: tar -czf ${{ github.ref_name }}.tar.gz -C .build/arm64-apple-macosx/release SwiftAI
+        run: tar -czf ${{ github.ref_name }}.tar.gz -C .build/arm64-apple-macosx/release swiftai
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
