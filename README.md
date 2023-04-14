@@ -7,14 +7,14 @@ Example of CLI tool using the OpenAIClient library. I only implemented commands 
 TLDR
 ```
 swift run
-alias ai='./.build/arm64-apple-macosx/debug/SwiftAI'
+alias ai='./.build/arm64-apple-macosx/debug/swiftai'
 ai completion "write a 5 line poem about spring" --model "text-davinci-002"
 ai stream-completion "write a 5 line poem about spring" --model "text-davinci-002"
 ```
 
-First time you’ll get this instruction to fill-in your credentials.
+First time you’ll get this instruction to fill-in your credentials. You can do so with:
 ```
-Error: 👉 Please edit the file Sources/SwiftAI/makeClient.swift with your OpenAI credentials.
+swiftai set-credentials --api-key "cafebabe" --organization-id "deadbeef"
 ```
 
 A longer terminal session:
@@ -22,13 +22,13 @@ A longer terminal session:
 % swift run
 Fetching git@github.com:janodevorg/OpenAIAPI.git
 ...
-[168/168] Linking SwiftAI
+[168/168] Linking swiftai
 Build complete! (9.76s)
 
-% find . -name SwiftAI 
-./.build/arm64-apple-macosx/debug/SwiftAI
+% find . -name swiftai 
+./.build/arm64-apple-macosx/debug/swiftai
 
-% alias ai='./.build/arm64-apple-macosx/debug/SwiftAI'
+% alias ai='./.build/arm64-apple-macosx/debug/swiftai'
 % ai
 % ai --help
 Compiling plugin GenerateManual...
@@ -42,17 +42,17 @@ OPTIONS:
   -h, --help              Show help information.
 
 SUBCOMMANDS:
-  completion              Requests a completion. Try this:
-                          SwiftAI completion "will humans self destruct?" --model "text-davinci-002"
-  stream-completion       Requests a completion with streaming. Try this:
-                          SwiftAI stream-completion "write a poem about spring" --model "text-davinci-002"
+  completion              Requests a completion.
+                          Try this: swiftai completion "will humans self destruct?" --model "text-davinci-002"
+  stream-completion       Requests a completion with streaming.
+                          Try this: swiftai stream-completion "write a poem about spring" --model "text-davinci-002"
 
-  See 'swift-ai help <subcommand>' for detailed help.
+  See 'swiftai help <subcommand>' for detailed help.
 
-% jano@JanoM1 SwiftAI % ai completion "write a 5 line poem about spring" --model "text-davinci-002" 
+% ai completion "write a 5 line poem about spring" --model "text-davinci-002" 
 Compiling plugin GenerateManual...
 Building for debugging...
-[5/5] Linking SwiftAI
+[5/5] Linking swiftai
 Build complete! (0.82s)
 
 

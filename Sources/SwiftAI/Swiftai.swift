@@ -2,7 +2,7 @@ import ArgumentParser
 import OpenAIClient
 
 @main
-struct SwiftAI: AsyncParsableCommand {
+struct Swiftai: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
         abstract: "OpenAI client.",
         subcommands: [
@@ -14,7 +14,7 @@ struct SwiftAI: AsyncParsableCommand {
 
     mutating func run() async throws {
         guard #available(macOS 12.0, *) else {
-          print("'swift-ai' isn't supported on this platform.")
+          print("'swiftai' isn't supported on this platform.")
           return
         }
         

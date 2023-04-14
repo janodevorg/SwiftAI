@@ -6,7 +6,7 @@ struct SetCredentials: AsyncParsableCommand {
     static let configuration = CommandConfiguration(abstract:
         """
         Stores OpenAI credentials in the keychain.
-        Try: SwiftAI set-credentials --api-key "cafebabe" --organization-id "deadbeef"
+        Try this: swiftai set-credentials --api-key "cafebabe" --organization-id "deadbeef"
         """
     )
 

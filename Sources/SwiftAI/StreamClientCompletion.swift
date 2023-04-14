@@ -7,8 +7,8 @@ import OpenAIClient
 struct StreamClientCompletion: AsyncParsableCommand {
     static let configuration = CommandConfiguration(abstract:
         """
-        Requests a completion with streaming. Try this:
-        SwiftAI stream-completion "write a poem about spring" --model "text-davinci-002"
+        Requests a completion with streaming.
+        Try this: swiftai stream-completion "write a poem about spring" --model "text-davinci-002"
         """
     )
 

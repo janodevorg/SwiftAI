@@ -7,8 +7,8 @@ import OpenAIClient
 struct Completion: AsyncParsableCommand {
     static let configuration = CommandConfiguration(abstract:
         """
-        Requests a completion. Try this:
-        SwiftAI completion "will humans self destruct?" --model "text-davinci-002"
+        Requests a completion.
+        Try this: swiftai completion "will humans self destruct?" --model "text-davinci-002"
         """
     )
 
