@@ -1,3 +1,5 @@
+[![Swift](https://github.com/janodevorg/SwiftAI/actions/workflows/swift.yml/badge.svg)](https://github.com/janodevorg/SwiftAI/actions/workflows/swift.yml) [![MIT license](http://img.shields.io/badge/license-MIT-lightgrey.svg)](http://opensource.org/licenses/MIT)
+
 # SwiftAI
 
 Example of CLI tool using the OpenAIClient library. I only implemented commands for completion and stream-completion.
