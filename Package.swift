@@ -6,6 +6,9 @@ let package = Package(
     platforms: [
         .macOS(.v13)
     ],
+    products: [
+        .executable(name: "swiftai", targets: ["SwiftAI"])
+    ],
     dependencies: [
         .package(url: "git@github.com:apple/swift-argument-parser.git", from: "1.2.2"),
         .package(url: "git@github.com:janodevorg/OpenAIClient.git", from: "2.0.0"),
