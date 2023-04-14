@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*.*.*
+
+jobs:
+  release:
+    runs-on: [self-hosted, X64, macOS]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build executable for release
+        run: swift build -c release --arch arm64 --product SwiftAI
+      - name: Compress archive
+        run: tar -czf ${{ github.ref_name }}.tar.gz -C .build/arm64-apple-macosx/release SwiftAI
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ github.ref_name }}.tar.gz
+          token: ${{ secrets.SWIFTAI_ADMIN_TOKEN }}
+      - uses: mislav/bump-homebrew-formula-action@v2
+        with:
+          formula-name: swiftai
+          homebrew-tap: janodevorg/homebrew-tap
+          base-branch: main
+          download-url: https://github.com/janodevorg/SwiftAI/releases/download/${{ github.ref_name }}/${{ github.ref_name }}.tar.gz
+        env:
+          COMMITTER_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
