@@ -51,7 +51,5 @@ SUBCOMMANDS:
 
 ```
 swift run
-alias ai='./.build/arm64-apple-macosx/debug/swiftai'
-ai completion "write a 5 line poem about spring" --model "text-davinci-002"
-ai stream-completion "write a 5 line poem about spring" --model "text-davinci-002"
+alias srtt='./.build/arm64-apple-macosx/debug/srtt'
 ```

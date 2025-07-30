@@ -1,4 +1,4 @@
-import Keychain
+@preconcurrency import Keychain
 
 struct Credentials {
     private static let apiKeyStore = ValueKeychainStore(accountName: "OpenAI Api Key", accessGroup: "H6G74E7G22.dev.jano.swiftai")

@@ -1,8 +1,7 @@
+*.xcodeproj
+*.xcworkspace
 .build
 .DS_Store
 .swiftpm
 build
-env
-Package.resolved
-xcshareddata
-xcuserdata
+Package.local.swift

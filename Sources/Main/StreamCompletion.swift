@@ -1,4 +1,4 @@
-import ArgumentParser
+@preconcurrency import ArgumentParser
 import Dispatch
 import Foundation
 import OpenAIAPI
